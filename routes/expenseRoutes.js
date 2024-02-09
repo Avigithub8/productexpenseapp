@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.post('/addExpense', userAuthentication.authenticate, expenseController.postExpense);
 
-router.get('/addExpense', userAuthentication.authenticate,(req,res)=>{
+router.get('/addExpense.html', userAuthentication.authenticate,(req,res)=>{
     res.sendFile(path.join(__dirname, '../views/addExpense.html'))
     
 } );

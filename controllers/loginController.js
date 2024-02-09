@@ -11,6 +11,7 @@ const generateAccessToken = (id, name, isPremium) => {
 
 exports.getLogin = (req, res) => {
   res.sendFile(path.join(__dirname, "../views/login.html"));
+  //res.send('login.html')
 };
 
 exports.login = (req, res, next) => {

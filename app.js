@@ -29,7 +29,9 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.static("public"));
+//app.use(express.static("public"));
+app.use('/public',express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'views')));
 
 app.use("/user", signupRoutes);
 app.use("/user", loginRoutes);
